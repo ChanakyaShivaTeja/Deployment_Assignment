@@ -3,12 +3,12 @@ pipeline {
     stages{
         stage('Code Checkout') {
             steps {
-                git branch: 'Development', url: 'https://github.com/ChanakyaShivaTeja/Deployment_Assignment.git'
+                git branch: 'Development', url: 'https://github.com/ChanakyaShivaTeja/Deployment_Assignment'
             }
         }
         stage('Sonar Report') {
             steps {
-                withSonarQubeEnv(installationName: 'deployment-sonar-report') {
+                withSonarQubeEnv(installationName: 'deployment-sonarQube') {
                     sh 'mvn clean verify sonar:sonar'
                     sleep 60;
                 }
