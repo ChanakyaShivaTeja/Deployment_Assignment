@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Code Checkout') {
             steps {
-                git branch: 'dev', url: 'https://github.com/ChanakyaShivaTeja/Deployment_Assignment.git'
+                git branch: 'Development', url: 'https://github.com/ChanakyaShivaTeja/Deployment_Assignment.git'
             }
         }
         stage('Sonar Report') {
